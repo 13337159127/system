@@ -18,7 +18,7 @@ public class EightSystemToTenSystem {
 	public int getEightSystem(String eightSystem) {
 		int j = 0;
 		int tenSystem = 0;
-		for (int i = eightSystem.length() - 1; i < eightSystem.length() && i > -1; i--) {
+		for (int i = eightSystem.length() - 1; i > -1; i--) {
 			char eightNumber = eightSystem.charAt(i);
 			int inteightNumber = Integer.parseInt(String.valueOf(eightNumber));
 			int intTenNumber = countTenSystem(inteightNumber, j);

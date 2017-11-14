@@ -20,8 +20,8 @@ public class SystemToTenSystem {
 	public int getSecondSystem(String system, MJ mj) {
 		int j = 0;
 		int tenSystem = 0;
-		// 从字符串的最后一位向前取值，如果要取的值小于字符串的长度并且大于-1，则进入循环
-		for (int i = system.length() - 1; i < system.length() && i > -1; i--) {
+		// 从字符串的最后一位向前取值
+		for (int i = system.length() - 1; i > -1; i--) {
 			char charNumber = system.charAt(i);
 			int systemNumber = getIntNumber(charNumber, mj.value());
 			int intTenSystem = getTenSystem(systemNumber, j, mj.value());

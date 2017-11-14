@@ -19,7 +19,7 @@ public class FourSystemToTenSystem {
 		int j = 0;
 		int tenSystem = 0;
 		// 获取字符串的长度，把字符串的值一个一个取出来
-		for (int i = fourSystem.length() - 1; i < fourSystem.length() && i > -1; i--) {
+		for (int i = fourSystem.length() - 1; i > -1; i--) {
 			char fourNumber = fourSystem.charAt(i);
 			int intFourNumber = Integer.parseInt(String.valueOf(fourNumber));
 			int intTenNumber = getTenSystem(intFourNumber, j);

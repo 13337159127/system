@@ -18,8 +18,8 @@ public class SecondSystemToTenSystem {
 	public int getSecondSystem(String secondSystem) {
 		int j = 0;
 		int tenSystem = 0;
-		// 从字符串的最后一位向前取值，如果要取的值小于字符串的长度并且大于-1，则进入循环
-		for (int i = secondSystem.length() - 1; i < secondSystem.length() && i > -1; i--) {
+		// 从字符串的最后一位向前取值
+		for (int i = secondSystem.length() - 1; i > -1; i--) {
 			char secondNumber = secondSystem.charAt(i);
 			int intSecondNumber = Integer.parseInt(String.valueOf(secondNumber));
 			int intTenSystem = getTenSystem(intSecondNumber, j);

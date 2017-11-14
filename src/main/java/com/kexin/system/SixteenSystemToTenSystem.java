@@ -19,10 +19,10 @@ public class SixteenSystemToTenSystem {
 		int j = 0;
 		int sum = 0;
 		// 从字符串的最后一位开始取值
-		for (int i = sixteenSystem.length() - 1; i < sixteenSystem.length() && i > -1; i--) {
+		for (int i = sixteenSystem.length() - 1; i > -1; i--) {
 			char sixteenNumber = sixteenSystem.charAt(i);
-			int number =  getTenSystemNumber(sixteenNumber);
-			int tenSystem =  sixteenSystemToTenSystem(number, j);
+			int number = getTenSystemNumber(sixteenNumber);
+			int tenSystem = sixteenSystemToTenSystem(number, j);
 			sum = sum + tenSystem;
 			j++;
 		}
