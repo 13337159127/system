@@ -21,8 +21,8 @@ public class SecondSystemToSixteenSystem {
 	public List<String> getSecondNumber(String secondSystem) {
 		List<String> list = new ArrayList<String>();
 		int j = 0;
+		//每一位二进制乘完的值加到一起
 		int sixteenSystem = 0;
-		int sixteenNumber = 0;
 		// 每四位二进制乘完以后加到一起的string类型值
 		String sixteen = "";
 		for (int i = secondSystem.length() - 1; i > -1; i--) {
@@ -31,12 +31,9 @@ public class SecondSystemToSixteenSystem {
 			if (j == 4) {
 				j = 0;
 				sixteenSystem = 0;
-				sixteenNumber = 0;
-				sixteen = "";
-				sixteenNumber = getSixteenNumber(intSecondNumber, j);
-			} else {
-				sixteenNumber = getSixteenNumber(intSecondNumber, j);
+				sixteen = "";			 				 
 			}
+			int sixteenNumber = getSixteenNumber(intSecondNumber, j);
 			sixteenSystem = sixteenSystem + sixteenNumber;
 			j++;
 			// 如果j等于4，把四位二进制乘完的值加到一起存放到list里面
