@@ -1,4 +1,4 @@
-package com.kexin.system;
+package com.system;
 
 /**
  * 二进制数字转换成十进制数字
@@ -7,6 +7,18 @@ package com.kexin.system;
  *
  */
 public class SecondSystemToTenSystem {
+
+	/**
+	 * 调用方法，传参数
+	 * 
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		SecondSystemToTenSystem system = new SecondSystemToTenSystem();
+		String secondSystem = "10";
+		int tenSystem = system.getSecondSystem(secondSystem);
+		system.printTenSystem(tenSystem);
+	}
 
 	/**
 	 * 从二进制中取出每一位值
@@ -54,18 +66,6 @@ public class SecondSystemToTenSystem {
 	 */
 	public void printTenSystem(int tenSystem) {
 		System.out.println("十进制数：" + tenSystem);
-	}
-
-	/**
-	 * 调用方法，传参数
-	 * 
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		SecondSystemToTenSystem system = new SecondSystemToTenSystem();
-		String secondSystem = "10";
-		int tenSystem = system.getSecondSystem(secondSystem);
-		system.printTenSystem(tenSystem);
 	}
 
 }

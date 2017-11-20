@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kexin.system.dao.SystemDao">
+	<!-- 多进制转十进制 -->
+	<insert id="systemToTenSystem" parameterType="com.kexin.system.entity.SystemEntity">
+		insert into radix
+		values(#{id},#{system},#{tenSystem},#{secondSystem})
+	</insert>
+	<!-- 批量添加输入，二进制循环转十进制 -->
+	<insert id="secondToTenSystem" parameterType="java.util.List">
+		insert into radix (id,system,tenSystem,secondSystem)
+		values
+		<foreach collection="list" item="item" index="index" separator=",">
+			(#{item.id},#{item.system},#{item.tenSystem},#{item.secondSystem})
+		</foreach>
+	</insert>
+</mapper>

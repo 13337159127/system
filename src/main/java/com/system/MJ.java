@@ -1,4 +1,4 @@
-package com.kexin.system;
+package com.system;
 
 /**
  * 枚举类，定义四个常量。用的时候取出来

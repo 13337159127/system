@@ -1,4 +1,4 @@
-package com.kexin.system;
+package com.system;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,6 +12,18 @@ import java.util.List;
 public class SecondSystemToSixteenSystem {
 
 	/**
+	 * 调用方法，传参数
+	 * 
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		SecondSystemToSixteenSystem system = new SecondSystemToSixteenSystem();
+		String secondSystem = "111100";
+		List<String> list = system.getSecondNumber(secondSystem);
+		system.printNumber(list);
+	}
+
+	/**
 	 * 从右向左取值，每四位2进制乘完的值加到一起。存放到list集合里面
 	 * 
 	 * @param secondSystem
@@ -21,7 +33,7 @@ public class SecondSystemToSixteenSystem {
 	public List<String> getSecondNumber(String secondSystem) {
 		List<String> list = new ArrayList<String>();
 		int j = 0;
-		//每一位二进制乘完的值加到一起
+		// 每一位二进制乘完的值加到一起
 		int sixteenSystem = 0;
 		// 每四位二进制乘完以后加到一起的string类型值
 		String sixteen = "";
@@ -31,7 +43,7 @@ public class SecondSystemToSixteenSystem {
 			if (j == 4) {
 				j = 0;
 				sixteenSystem = 0;
-				sixteen = "";			 				 
+				sixteen = "";
 			}
 			int sixteenNumber = getSixteenNumber(intSecondNumber, j);
 			sixteenSystem = sixteenSystem + sixteenNumber;
@@ -99,17 +111,5 @@ public class SecondSystemToSixteenSystem {
 		for (int i = list.size() - 1; i > -1; i--) {
 			System.out.print(list.get(i));
 		}
-	}
-
-	/**
-	 * 调用方法，传参数
-	 * 
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		SecondSystemToSixteenSystem system = new SecondSystemToSixteenSystem();
-		String secondSystem = "111100";
-		List<String> list = system.getSecondNumber(secondSystem);
-		system.printNumber(list);
 	}
 }

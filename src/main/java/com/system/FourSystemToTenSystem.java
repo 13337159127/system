@@ -1,4 +1,4 @@
-package com.kexin.system;
+package com.system;
 
 /**
  * 四进制转换成十进制数字
@@ -7,6 +7,18 @@ package com.kexin.system;
  *
  */
 public class FourSystemToTenSystem {
+
+	/**
+	 * 调用方法，传参数
+	 * 
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		FourSystemToTenSystem system = new FourSystemToTenSystem();
+		String fourSystem = "200";
+		int TenSystem = system.getFourSystem(fourSystem);
+		system.printNumber(TenSystem);
+	}
 
 	/**
 	 * 四进制转换成十进制
@@ -52,18 +64,6 @@ public class FourSystemToTenSystem {
 	 */
 	public void printNumber(int TenSystem) {
 		System.out.println("十进制：" + TenSystem);
-	}
-
-	/**
-	 * 调用方法，传参数
-	 * 
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		FourSystemToTenSystem system = new FourSystemToTenSystem();
-		String fourSystem = "200";
-		int TenSystem = system.getFourSystem(fourSystem);
-		system.printNumber(TenSystem);
 	}
 
 }

@@ -1,4 +1,4 @@
-package com.kexin.system;
+package com.system;
 
 /**
  * 十六进制转换成10进制
@@ -7,6 +7,18 @@ package com.kexin.system;
  *
  */
 public class SixteenSystemToTenSystem {
+
+	/**
+	 * 调用方法，传参数
+	 * 
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		SixteenSystemToTenSystem system = new SixteenSystemToTenSystem();
+		String sixteenSystem = "1a";
+		int tenSystem = system.getSixteenSystem(sixteenSystem);
+		system.printNumber(tenSystem);
+	}
 
 	/**
 	 * 从十六进制取出每一位转换成十进制
@@ -57,6 +69,16 @@ public class SixteenSystemToTenSystem {
 	}
 
 	/**
+	 * 打印十进制数字
+	 * 
+	 * @param tenSystem
+	 *            十进制数字
+	 */
+	public void printNumber(int tenSystem) {
+		System.out.println("十进制数字：" + tenSystem);
+	}
+
+	/**
 	 * 十六进制转十进制
 	 * 
 	 * @param number
@@ -69,28 +91,6 @@ public class SixteenSystemToTenSystem {
 		double figure = (number * Math.pow(16, j));
 		int intTenSystem = (int) figure;
 		return intTenSystem;
-	}
-
-	/**
-	 * 打印十进制数字
-	 * 
-	 * @param tenSystem
-	 *            十进制数字
-	 */
-	public void printNumber(int tenSystem) {
-		System.out.println("十进制数字：" + tenSystem);
-	}
-
-	/**
-	 * 调用方法，传参数
-	 * 
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		SixteenSystemToTenSystem system = new SixteenSystemToTenSystem();
-		String sixteenSystem = "1a";
-		int tenSystem = system.getSixteenSystem(sixteenSystem);
-		system.printNumber(tenSystem);
 	}
 
 }
